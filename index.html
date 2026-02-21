@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Wiki y guía completa de la saga Metal Gear Solid — historia, personajes, gameplay y más.">
+    <title>Metal Gear Wiki</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .cursor-blink {
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* Timeline */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin-top: 2rem;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 18px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-green);
+        }
+
+        .tl-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            padding: 0 0 2rem 0;
+        }
+
+        .tl-dot {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 2px solid var(--accent-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-title);
+            font-size: 0.6rem;
+            color: var(--accent-green);
+            flex-shrink: 0;
+            z-index: 1;
+            box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
+        }
+
+        .tl-content h3 {
+            font-family: var(--font-title);
+            font-size: 0.95rem;
+            color: var(--text-white);
+            margin-bottom: 0.3rem;
+        }
+
+        .tl-content p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .tl-content a {
+            color: var(--accent-green);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-family: var(--font-title);
+            letter-spacing: 1px;
+        }
+
+        .tl-content a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <header>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">METAL GEAR <span>WIKI</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="games/metal-gear.html">MG</a></li>
+                    <li><a href="games/metal-gear-2.html">MG2</a></li>
+                    <li><a href="games/mgs1.html">MGS1</a></li>
+                    <li><a href="games/mgs2.html">MGS2</a></li>
+                    <li><a href="games/mgs3.html">MGS3</a></li>
+                    <li><a href="games/mgs4.html">MGS4</a></li>
+                    <li><a href="games/peace-walker.html">PW</a></li>
+                    <li><a href="games/ground-zeroes.html">GZ</a></li>
+                    <li><a href="games/phantom-pain.html">TPP</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-eyebrow">Enciclopedia No Oficial</p>
+            <h1 class="type-cursor"><span>Metal Gear</span><br>Wiki</h1>
+            <p class="hero-sub">La guía completa de la saga de Hideo Kojima. Historia, personajes, mecánicas y lore de
+                cada entrega.</p>
+            <div class="hero-img-placeholder">
+                <span style="z-index:1;font-size:3rem;">🐍</span>
+                <span style="z-index:1;">[ PORTADA PRINCIPAL — IMAGEN ]</span>
+            </div>
+            <a href="#saga" class="btn btn-primary">Explorar la Saga</a>
+        </div>
+    </section>
+
+    <!-- SOBRE LA SAGA -->
+    <div class="section" id="saga">
+        <h2 class="section-title">La Saga</h2>
+        <div class="section-divider"></div>
+        <p>
+            <strong>Metal Gear</strong> es una franquicia de videojuegos creada por <strong>Hideo Kojima</strong> y
+            publicada originalmente por Konami. Desde 1987, la saga definió el género de sigilo táctico con narrativas
+            complejas, personajes icónicos y crítica política profunda.
+        </p>
+        <p>
+            La historia sigue principalmente a los clones de Big Boss —especialmente <strong>Solid Snake</strong>— en su
+            lucha contra organizaciones secretas que buscan implantar el concepto conocido como "Metal Gear": un arma de
+            destrucción masiva de propulsión bípeda.
+        </p>
+    </div>
+
+    <!-- JUEGOS GRID -->
+    <div class="section" style="padding-top:0">
+        <h2 class="section-title">Juegos de la Franquicia</h2>
+        <div class="section-divider"></div>
+        <div class="games-grid">
+
+            <!-- MG1 -->
+            <a href="games/metal-gear.html" class="game-card">
+                <div class="card-cover">
+                    <span class="card-cover-label">PORTADA / IMAGEN</span>
+                    <span class="card-year">1987</span>
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">MSX2 · NES</span>
+                    <div class="card-title">Metal Gear</div>
+                    <p class="card-desc">El origen. Solid Snake se infiltra en Outer Heaven para destruir el Metal Gear.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <span>1987</span><span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <!-- MG2 -->
+            <a href="games/metal-gear-2.html" class="game-card">
+                <div class="card-cover">
+                    <span class="card-cover-label">PORTADA / IMAGEN</span>
+                    <span class="card-year">1990</span>
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">MSX2</span>
+                    <div class="card-title">Metal Gear 2: Solid Snake</div>
+                    <p class="card-desc">La secuela directa. Snake regresa a Zanzibar Land para rescatar al Dr. Marv.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <span>1990</span><span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <!-- MGS -->
+            <a href="games/mgs1.html" class="game-card">
+                <div class="card-cover">
+                    <span class="card-cover-label">PORTADA / IMAGEN</span>
+                    <span class="card-year">1998</span>
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">PlayStation · PC</span>
+                    <div class="card-title">Metal Gear Solid</div>
+                    <p class="card-desc">El salto al 3D que redefinió los videojuegos. Operation Shadow Moses.</p>
+                </div>
+                <div class="card-footer">
+                    <span>1998</span><span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <!-- MGS2 -->
+            <a href="games/mgs2.html" class="game-card">
+                <div class="card-cover">
+                    <span class="card-cover-label">PORTADA / IMAGEN</span>
+                    <span class="card-year">2001</span>
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">PS2 · Xbox · PC</span>
+                    <div class="card-title">Metal Gear Solid 2: Sons of Liberty</div>
+                    <p class="card-desc">Raiden y la planta Big Shell. Una deconstrucción del género y la información.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <span>2001</span><span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <!-- MGS3 -->
+            <a href="games/mgs3.html" class="game-card">
+                <div class="card-cover">
+                    <span class="card-cover-label">PORTADA / IMAGEN</span>
+                    <span class="card-year">2004</span>
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">PS2</span>
+                    <div class="card-title">Metal Gear Solid 3: Snake Eater</div>
+                    <p class="card-desc">El origen de Big Boss. Guerra Fría, supervivencia en la jungla y The Sorrow.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <span>2004</span><span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <!-- MGS4 -->
+            <a href="games/mgs4.html" class="game-card">
+                <div class="card-cover">
+                    <span class="card-cover-label">PORTADA / IMAGEN</span>
+                    <span class="card-year">2008</span>
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">PS3</span>
+                    <div class="card-title">Metal Gear Solid 4: Guns of the Patriots</div>
+                    <p class="card-desc">El capítulo final de Solid Snake en un mundo de guerras privatizadas.</p>
+                </div>
+                <div class="card-footer">
+                    <span>2008</span><span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <!-- Peace Walker -->
+            <a href="games/peace-walker.html" class="game-card">
+                <div class="card-cover">
+                    <span class="card-cover-label">PORTADA / IMAGEN</span>
+                    <span class="card-year">2010</span>
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">PSP · PS3 · 360</span>
+                    <div class="card-title">Metal Gear Solid: Peace Walker</div>
+                    <p class="card-desc">Big Boss en Costa Rica. El nacimiento de Militaires Sans Frontières.</p>
+                </div>
+                <div class="card-footer">
+                    <span>2010</span><span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <!-- Ground Zeroes -->
+            <a href="games/ground-zeroes.html" class="game-card">
+                <div class="card-cover">
+                    <span class="card-cover-label">PORTADA / IMAGEN</span>
+                    <span class="card-year">2014</span>
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">PS4 · PS3 · XOne · 360 · PC</span>
+                    <div class="card-title">Metal Gear Solid V: Ground Zeroes</div>
+                    <p class="card-desc">El prólogo de The Phantom Pain. Camp Omega y el comienzo de una tragedia.</p>
+                </div>
+                <div class="card-footer">
+                    <span>2014</span><span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <!-- Phantom Pain -->
+            <a href="games/phantom-pain.html" class="game-card">
+                <div class="card-cover">
+                    <span class="card-cover-label">PORTADA / IMAGEN</span>
+                    <span class="card-year">2015</span>
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">PS4 · PS3 · XOne · 360 · PC</span>
+                    <div class="card-title">Metal Gear Solid V: The Phantom Pain</div>
+                    <p class="card-desc">El mundo abierto de Kojima. Big Boss y Diamond Dogs contra Skull Face.</p>
+                </div>
+                <div class="card-footer">
+                    <span>2015</span><span class="card-arrow">→</span>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="section" style="padding-top:0">
+        <h2 class="section-title">Línea del Tiempo In-Universe</h2>
+        <div class="section-divider"></div>
+        <p style="color:var(--text-muted);font-size:.9rem;margin-bottom:.5rem;">(Orden cronológico de los eventos dentro
+            del lore, no de lanzamiento)</p>
+        <div class="timeline">
+            <div class="tl-item">
+                <div class="tl-dot">1964</div>
+                <div class="tl-content">
+                    <h3>Operation Snake Eater</h3>
+                    <p>Naked Snake infiltra la URSS para eliminar a The Boss. — <a href="games/mgs3.html">MGS3</a></p>
+                </div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-dot">197x</div>
+                <div class="tl-content">
+                    <h3>Operaciones de FOX</h3>
+                    <p>Big Boss comanda MSF. — <a href="games/peace-walker.html">Peace Walker</a></p>
+                </div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-dot">1984</div>
+                <div class="tl-content">
+                    <h3>Camp Omega & Diamond Dogs</h3>
+                    <p>El despertar de Venom Snake. — <a href="games/ground-zeroes.html">GZ</a> / <a
+                            href="games/phantom-pain.html">TPP</a></p>
+                </div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-dot">1995</div>
+                <div class="tl-content">
+                    <h3>Outer Heaven</h3>
+                    <p>Solid Snake destruye el primer Metal Gear. — <a href="games/metal-gear.html">Metal Gear</a></p>
+                </div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-dot">1999</div>
+                <div class="tl-content">
+                    <h3>Zanzibar Land</h3>
+                    <p>Snake enfrenta a Big Boss. — <a href="games/metal-gear-2.html">Metal Gear 2</a></p>
+                </div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-dot">2005</div>
+                <div class="tl-content">
+                    <h3>Shadow Moses</h3>
+                    <p>FOXHOUND toma la instalación nuclear. — <a href="games/mgs1.html">MGS1</a></p>
+                </div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-dot">2009</div>
+                <div class="tl-content">
+                    <h3>Big Shell & Arsenal Gear</h3>
+                    <p>Raiden y los Hijos de la Libertad. — <a href="games/mgs2.html">MGS2</a></p>
+                </div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-dot">2014</div>
+                <div class="tl-content">
+                    <h3>Guns of the Patriots</h3>
+                    <p>La batalla final de Solid Snake. — <a href="games/mgs4.html">MGS4</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">METAL GEAR WIKI</div>
+        <p class="footer-text">Wiki no oficial. Todos los derechos de Metal Gear pertenecen a Konami &amp; Hideo Kojima.
+        </p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
